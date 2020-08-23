@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainScreen"
+    android:background="@drawable/app_bg"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".FlashcardMultiple">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/test_button"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/round_btn"
+            android:fontFamily="@font/bangers"
+            android:textSize="26sp"
+            android:text="@string/start_study_mode" />
+
+        <Button
+            android:id="@+id/timerBtn"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/round_card"
+            android:layout_marginStart="10dp"
+            android:textSize="20sp"
+            android:text="@string/_0"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/deck_btn_view"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginHorizontal="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/all_deck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/round_btn_deck"
+            android:layout_weight="1"
+            android:text="@string/all"
+            android:fontFamily="@font/annie_use_your_telescope"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            tools:ignore="ButtonStyle"
+            android:focusable="true" />
+
+        <Button
+            android:id="@+id/deck1_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/round_btn_lg"
+            android:layout_weight="1"
+            android:text="@string/deck_1"
+            android:fontFamily="@font/annie_use_your_telescope"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            tools:ignore="ButtonStyle"
+            android:focusable="true" />
+
+        <Button
+            android:id="@+id/deck2_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/round_btn_lg"
+            android:layout_weight="1"
+            android:text="@string/deck_2"
+            android:fontFamily="@font/annie_use_your_telescope"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/deck3_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/round_btn_lg"
+            android:layout_weight="1"
+            android:fontFamily="@font/annie_use_your_telescope"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="@string/deck_3"
+            tools:ignore="ButtonStyle" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:background="@drawable/round_card"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:text="@string/no_flashcards_in_the_deck"
+                android:fontFamily="@font/annie_use_your_telescope"
+                android:textStyle="bold"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginVertical="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginVertical="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/use_the_icon"
+                        android:layout_marginHorizontal="10dp"
+                        android:textSize="19sp"/>
+
+                    <ImageButton
+                        android:layout_width="25dp"
+                        android:layout_height="30dp"
+                        android:backgroundTint="@color/touch_sel"
+                        android:contentDescription="@android:string/untitled"
+                        android:background="@drawable/add_question" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:text="@string/to_add_a_new_card"
+                        android:textSize="19sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginVertical="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/use_the_icon"
+                        android:layout_marginHorizontal="10dp"
+                        android:textSize="19sp"/>
+
+                    <ImageButton
+                        android:layout_width="20dp"
+                        android:layout_height="30dp"
+                        android:backgroundTint="@color/touch_sel"
+                        android:contentDescription="@android:string/untitled"
+                        android:background="@drawable/edit_button" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:text="@string/to_edit_a_card"
+                        android:textSize="19sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginVertical="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/use_the_icon"
+                        android:layout_marginHorizontal="10dp"
+                        android:textSize="19sp"/>
+
+                    <ImageButton
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:backgroundTint="@color/touch_sel"
+                        android:contentDescription="@android:string/untitled"
+                        android:background="@drawable/delete_button" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="10dp"
+                        android:text="@string/to_delete_a_card"
+                        android:textSize="19sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_marginVertical="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/navigate_through_cards_using"
+                    android:textSize="19sp"/>
+
+                <ImageButton
+                    android:layout_width="25dp"
+                    android:layout_height="30dp"
+                    android:rotation="180"
+                    android:backgroundTint="@color/touch_sel"
+                    android:background="@drawable/next_button" />
+                <ImageButton
+                    android:layout_width="25dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:backgroundTint="@color/touch_sel"
+                    android:contentDescription="@android:string/untitled"
+                    android:background="@drawable/next_button" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/when_ready_to_study_click_the_button"
+                    android:fontFamily="@font/annie_use_your_telescope"
+                    android:textStyle="bold"
+                    android:textSize="23sp"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:background="@drawable/round_btn_lg"
+                    android:text="Start  Study  Mode"
+                    android:fontFamily="@font/bangers"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/questionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginVertical="15dp"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/previous_button"
+                android:layout_width="35dp"
+                android:layout_height="55dp"
+                android:rotation="180"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="@color/touch_sel"
+                android:background="@drawable/next_button" />
+
+            <RelativeLayout
+                android:id="@+id/cardview"
+                android:layout_width="0dp"
+                android:layout_height="310dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/flashcardAnswer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/round_card_green"
+                    android:gravity="center"
+                    android:text="@string/answer"
+                    android:fontFamily="@font/annie_use_your_telescope"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/flashcardQuestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/round_card"
+                    android:gravity="center"
+                    android:fontFamily="@font/annie_use_your_telescope"
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:text="Question?"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/next_button"
+                android:layout_width="35dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="5dp"
+                android:backgroundTint="@color/touch_sel"
+                android:contentDescription="@android:string/untitled"
+                android:background="@drawable/next_button" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/answers_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/choice1"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/round_btn_lg"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="@string/answer_a"
+                android:fontFamily="@font/annie_use_your_telescope"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/choice2"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:background="@drawable/round_btn_lg"
+                android:layout_marginBottom="8dp"
+                android:text="@string/answer_b"
+                android:fontFamily="@font/annie_use_your_telescope"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/choice3"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:background="@drawable/round_btn_lg"
+                android:layout_marginBottom="8dp"
+                android:text="@string/answer_c"
+                android:fontFamily="@font/annie_use_your_telescope"
+                android:textSize="20sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttons_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="start|bottom">
+
+        <ImageButton
+            android:id="@+id/add_question"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/add_question"
+            android:backgroundTint="@color/touch_sel"
+            android:contentDescription="@android:string/untitled"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="end|bottom">
+
+            <ImageButton
+                android:id="@+id/edit_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="40dp"
+                android:backgroundTint="@color/touch_sel"
+                android:contentDescription="@android:string/untitled"
+                android:background="@drawable/edit_button" />
+
+            <ImageButton
+                android:id="@+id/delete_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:backgroundTint="@color/touch_sel"
+                android:contentDescription="@android:string/untitled"
+                android:background="@drawable/delete_button" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,110 @@
+package com.example.mystudycards;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
+
+import java.util.UUID;
+// Flashcard model class is created annotated with @Entity. This represents the Flashcards table.
+@Entity
+public class Flashcard {
+
+    Flashcard(String question, String answer, String wrongAnswer1, String wrongAnswer2, String typeCard, String deckNum) {
+        this.uuid = UUID.randomUUID().toString();
+        this.question = question;
+        this.answer = answer;
+        this.wrongAnswer1 = wrongAnswer1;
+        this.wrongAnswer2 = wrongAnswer2;
+        this.typeCard = typeCard;
+        this.deckNum = deckNum;
+    }
+
+    @PrimaryKey
+    @NonNull
+    @ColumnInfo(name = "uuid")
+    private String uuid;
+
+    @NonNull
+    public String getUuid() {
+        return uuid;
+    }
+
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
+    }
+
+    @NonNull
+    @ColumnInfo(name = "question")
+    private String question;
+
+    @ColumnInfo(name = "answer")
+    private String answer;
+
+    @Nullable
+    @ColumnInfo(name = "wrong_answer_1")
+    private String wrongAnswer1;
+
+    @Nullable
+    @ColumnInfo(name = "wrong_answer_2")
+    private String wrongAnswer2;
+
+    @ColumnInfo(name = "type_card")
+    private String typeCard;
+
+    @ColumnInfo(name = "deck_num")
+    private String deckNum;
+
+    // Create getters and setters each elements of the table.
+    public String getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
+    public String getAnswer() {
+        return answer;
+    }
+
+    public void setAnswer(String answer) {
+        this.answer = answer;
+    }
+
+    @Nullable
+    public String getWrongAnswer1() {
+        return wrongAnswer1;
+    }
+
+    public void setWrongAnswer1(String wrongAnswer1) {
+        this.wrongAnswer1 = wrongAnswer1;
+    }
+
+    @Nullable
+    public String getWrongAnswer2() {
+        return wrongAnswer2;
+    }
+
+    public void setWrongAnswer2(String wrongAnswer2) {
+        this.wrongAnswer2 = wrongAnswer2;
+    }
+
+    public String getTypeCard() {
+        return typeCard;
+    }
+
+    public void setTypeCard(String typeCard) {
+        this.typeCard = typeCard;
+    }
+
+    public String getDeckNum() {
+        return deckNum;
+    }
+
+    public void setDeckNum(String deckNum) {
+        this.deckNum = deckNum;
+    }
+}

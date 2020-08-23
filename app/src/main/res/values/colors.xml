@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#162867</color>
+    <color name="colorPrimaryDark">#1C3280</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="tint_button">#B59E9E</color>
+    <color name="button">#EAFFFFFF</color>
+    <color name="ansRightColor">#F215A615</color>
+
+</resources>

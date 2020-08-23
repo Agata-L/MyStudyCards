@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".AboutActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/background_story"
+                android:fontFamily="@font/bangers"
+                android:textSize="28sp"
+                android:gravity="center"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginVertical="20dp"
+                android:src="@drawable/glyndwr_lg" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginVertical="5dp"
+                android:text="@string/this_application_was_generated_as_the_artefact_of_a_master_s_dissertation_completed_by_agata_lopes_a_computer_science_student_at_glyndwr_university_in_wrexham_uk"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:textSize="18sp"
+                android:text="@string/my_study_cards_is_a_memorisation_tool_that_help_its_users_to_develop_their_memory_skills_this_flexible_application_allows_its_users_to_create_their_personalised_flashcards_and_study_them_in_two_different_modes"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:textSize="18sp"
+                    android:text="@string/the_purpose_of_this_app_is_to_provide_users_with_a_friendly_and_welcoming_environment_where_study_flashcards_can_be_created_and_studied_as_needed_without_relying_on_competition_as_other_applications_do"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                android:textSize="18sp"
+                android:text="@string/in_the_end_just_like_a_traditional_flashcard_this_application_can_be_used_by_anyone_who_want_to_retain_knowledge_the_subjects_of_the_flashcards_can_be_anything_from_a_new_language_to_learn_or_a_series_of_specific_history_events_to_memorise_its_usage_will_be_limited_by_the_imagination_and_necessity_of_the_user"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

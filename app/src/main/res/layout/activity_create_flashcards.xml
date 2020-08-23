@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg"
+    android:orientation="vertical"
+    android:padding="13dp"
+    tools:context=".CreateFlashcards">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bangers"
+        android:textSize="28sp"
+        android:text="@string/create_flashcards"
+        android:gravity="center"/>
+
+    <View
+        android:layout_width="145dp"
+        android:layout_height="2dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:background="#fff" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/bangers"
+        android:textSize="18sp"
+        android:text="@string/select_type"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/check_only"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:fontFamily="@font/annie_use_your_telescope"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:buttonTint="#FFFFFF"
+            android:text="@string/only_flashcard" />
+
+        <CheckBox
+            android:id="@+id/check_multi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/annie_use_your_telescope"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:buttonTint="#FFFFFF"
+            android:checked="true"
+            android:text="@string/muiltiple_choice" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/bangers"
+        android:textSize="18sp"
+        android:text="@string/select_deck"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/deck1_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/round_btn_deck"
+            android:layout_weight="1"
+            android:fontFamily="@font/annie_use_your_telescope"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="@string/deck_1"
+            tools:ignore="ButtonStyle"
+            android:focusable="true" />
+
+        <Button
+            android:id="@+id/deck2_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/round_btn_lg"
+            android:layout_weight="1"
+            android:fontFamily="@font/annie_use_your_telescope"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="@string/deck_2"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/deck3_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/round_btn_lg"
+            android:layout_weight="1"
+            android:fontFamily="@font/annie_use_your_telescope"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="@string/deck_3"
+            tools:ignore="ButtonStyle" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="290dp"
+        android:layout_height="2dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="#fff" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/question_lyt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edit_question"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:background="@drawable/round_card"
+                android:hint="@string/insert_question"
+                android:textColorHint="@drawable/hint_selector"
+                android:fontFamily="@font/annie_use_your_telescope"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:textColor="#FFFFFF"
+                android:inputType="textMultiLine" />
+
+            <EditText
+                android:id="@+id/edit_answer"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="6dp"
+                android:background="@drawable/round_card_green"
+                android:gravity="center"
+                android:fontFamily="@font/annie_use_your_telescope"
+                android:textSize="24sp"
+                android:hint="@string/insert_correct_answer"
+                android:inputType="textMultiLine"
+                android:textColor="#FFFFFF"
+                android:textColorHint="@drawable/hint_selector" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/incorrect_lyt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edit_incorrect_1"
+                android:layout_width="match_parent"
+                android:background="@drawable/round_btn_red"
+                android:layout_margin="6dp"
+                android:gravity="center"
+                android:layout_height="40dp"
+                android:textColorHint="@drawable/hint_selector"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/annie_use_your_telescope"
+                android:textSize="20sp"
+                android:hint="@string/insert_incorrect_choice"
+                android:inputType="textMultiLine" />
+
+            <EditText
+                android:id="@+id/edit_incorrect_2"
+                android:layout_width="match_parent"
+                android:background="@drawable/round_card_red"
+                android:layout_margin="6dp"
+                android:gravity="center"
+                android:layout_height="40dp"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/annie_use_your_telescope"
+                android:textSize="20sp"
+                android:textColorHint="@drawable/hint_selector"
+                android:hint="@string/insert_incorrect_choice"
+                android:inputType="textMultiLine" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="start|bottom">
+
+        <ImageView
+            android:id="@+id/cancel_add_card"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:tint="#EAFFFFFF"
+            android:src="@drawable/cancel_add" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="end|bottom">
+
+            <ImageView
+                android:id="@+id/save_question"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:tint="#EAFFFFFF"
+                android:src="@drawable/save_new_question" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

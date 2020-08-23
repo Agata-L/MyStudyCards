@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/app_bg"
+    android:paddingHorizontal="30dp"
+    android:paddingVertical="15dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textSize="26sp"
+        android:fontFamily="@font/bangers"
+        android:text="@string/build_your_own_flashcards" />
+
+    <View
+        android:layout_width="230dp"
+        android:layout_height="2dp"
+        android:layout_gravity="center"
+        android:background="#fff" />
+
+    <Button
+        android:id="@+id/create_btn"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/round_btn_lg"
+        android:fontFamily="@font/annie_use_your_telescope"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="@string/create" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textSize="26sp"
+        android:fontFamily="@font/bangers"
+        android:text="@string/select_study_mode"/>
+
+    <View
+        android:layout_width="150dp"
+        android:layout_height="2dp"
+        android:layout_gravity="center"
+        android:background="#fff" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:paddingVertical="15dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/onlyFlashcardBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_btn"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/annie_use_your_telescope"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="@string/only_flashcard"/>
+
+        <Button
+            android:id="@+id/multiFlashcardBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/round_btn"
+            android:fontFamily="@font/annie_use_your_telescope"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_weight="1"
+            android:text="@string/flashcard_n_amp_nmultiple_choice"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textSize="22sp"
+            android:fontFamily="@font/bangers"
+            android:text="@string/options"/>
+
+        <View
+            android:layout_width="45dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:background="#fff" />
+
+        <Button
+            android:id="@+id/helpBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_btn_lg"
+            android:layout_weight="1"
+            android:fontFamily="@font/annie_use_your_telescope"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginVertical="5dp"
+            android:text="@string/help"/>
+
+        <Button
+            android:id="@+id/aboutBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:fontFamily="@font/annie_use_your_telescope"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="@drawable/round_btn_lg"
+            android:layout_weight="1"
+            android:text="@string/about"/>
+
+        <Button
+            android:id="@+id/contactsBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_btn_lg"
+            android:layout_weight="1"
+            android:fontFamily="@font/annie_use_your_telescope"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginVertical="5dp"
+            android:text="@string/contacts" />
+
+    </LinearLayout>
+</LinearLayout>
